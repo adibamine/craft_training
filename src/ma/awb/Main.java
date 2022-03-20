@@ -6,6 +6,6 @@ public class Main {
         Rectangle rectangle = new Rectangle(4, 6);
         Circle circle = new Circle(7);
         AreaCalculator areaCalculator = new AreaCalculator();
-        System.out.println(areaCalculator.Area(new Object[]{rectangle, circle}));
+        System.out.println(areaCalculator.Area(new Shape[]{rectangle, circle}));
     }
 }
