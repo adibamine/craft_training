@@ -1,8 +1,9 @@
 package ma.awb;
 
-public class MultiplyOperation {
+public class MultiplyOperation implements CalculatorOperation {
 
-    public double multiply(double numA, double numB){
-        return numA * numB;
+    @Override
+    public double calculate(double numbA, double numB) {
+        return numbA * numB;
     }
 }

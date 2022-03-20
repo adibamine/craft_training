@@ -1,8 +1,9 @@
 package ma.awb;
 
-public class SubtractOperation {
+public class SubtractOperation implements CalculatorOperation {
 
-    public double subtract(double numA, double numB){
-        return numA - numB;
+    @Override
+    public double calculate(double numbA, double numbB) {
+        return numbA - numbB;
     }
 }

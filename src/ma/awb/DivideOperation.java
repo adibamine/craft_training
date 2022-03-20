@@ -1,9 +1,9 @@
 package ma.awb;
 
-public class DivideOperation {
+public class DivideOperation implements CalculatorOperation {
 
-    public double divide(double numA, double numB) {
-        return numA / numB;
+    @Override
+    public double calculate(double numbA, double numB) {
+        return numbA / numB;
     }
-
 }
