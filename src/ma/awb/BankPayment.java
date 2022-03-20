@@ -2,7 +2,7 @@ package ma.awb;
 
 import java.util.List;
 
-public class BankPayment implements Payment {
+public class BankPayment implements Bank {
 
     @Override
     public void initiatePayments() {
@@ -19,15 +19,5 @@ public class BankPayment implements Payment {
     public List<Object> getPayments() {
         // ...
         return null;
-    }
-
-    @Override
-    public void intiateLoanSettlement() {
-        throw new UnsupportedOperationException("This is not a loan payment");
-    }
-
-    @Override
-    public void initiateRePayment() {
-        throw new UnsupportedOperationException("This is not a loan payment");
     }
 }
