@@ -1,6 +1,6 @@
 package ma.awb;
 
-public class PremiumAccount extends WithdrawableAccount {
+public class PremiumAccount extends BankAccount {
 
     private double balance;
     private int preferencePoints;

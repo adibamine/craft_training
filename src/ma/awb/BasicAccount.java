@@ -1,6 +1,6 @@
 package ma.awb;
 
-public class BasicAccount extends WithdrawableAccount {
+public class BasicAccount extends BankAccount {
 
     private double balance;
 

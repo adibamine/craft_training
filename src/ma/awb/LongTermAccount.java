@@ -9,4 +9,8 @@ public class LongTermAccount extends BankAccount {
         this.balance += amount;
     }
 
+    @Override
+    public boolean withdraw(double amount) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

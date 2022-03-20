@@ -9,13 +9,13 @@ public class WithdrawalService {
 
     public void debitAccounts() {
 
-        WithdrawableAccount basiAcct = new BasicAccount();
+        BankAccount basiAcct = new BasicAccount();
         basiAcct.deposit(100.00);
 
-        WithdrawableAccount premiumAcct = new PremiumAccount();
+        BankAccount premiumAcct = new PremiumAccount();
         premiumAcct.deposit(200.00);
 
-        List<WithdrawableAccount> accounts = new ArrayList();
+        List<BankAccount> accounts = new ArrayList();
 
         accounts.add(basiAcct);
         accounts.add(premiumAcct);
@@ -24,8 +24,12 @@ public class WithdrawalService {
 
     }
 
-    private void debitAdministrativeExpenses(List<WithdrawableAccount> accounts) {
-        accounts.stream()
-                .forEach(account -> account.withdraw(ADMINISTRATIVE_EXPENSES_CHARGE));
+    private void debitAdministrativeExpenses(List<BankAccount> accounts) {
+        for (BankAccount account : accounts) {
+            if (account instanceof LongTermAccount)
+                continue;
+            else
+                account.withdraw(ADMINISTRATIVE_EXPENSES_CHARGE);
+        }
     }
 }
