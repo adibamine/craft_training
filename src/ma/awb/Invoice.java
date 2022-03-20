@@ -17,7 +17,7 @@ public class Invoice {
     }
 
     public double calculateTotal() {
-        double price = ((book.price - book.price * discountRate) * this.quantity);
+        double price = ((book.getPrice() - book.getPrice() * discountRate) * this.quantity);
 
         double priceWithTaxes = price * (1 + taxRate);
 
@@ -25,10 +25,10 @@ public class Invoice {
     }
 
     public void printInvoice() {
-        System.out.println(quantity + "x " + book.name + " " +          book.price + "$");
+        System.out.println(quantity + "x " + book.getName() + " " + book.getPrice() + "DH");
         System.out.println("Discount Rate: " + discountRate);
         System.out.println("Tax Rate: " + taxRate);
-        System.out.println("Total: " + total);
+        System.out.println("Total: " + total + "DH");
     }
 
     public void saveToFile(String filename) {
