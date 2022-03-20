@@ -1,5 +1,5 @@
 package ma.awb;
 
-public class VlcMediaPlayer extends MediaPlayer {
+public class VlcMediaPlayer extends VideoMediaPlayer {
 
 }
