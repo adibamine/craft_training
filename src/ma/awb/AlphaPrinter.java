@@ -1,6 +1,8 @@
 package ma.awb;
 
-public class AlphaPrinter implements AllInOnePrinter {
+public class AlphaPrinter implements AllInOneScanning,
+        AllInOneFaxing,
+        AllInOnePrinting {
 
     @Override
     public boolean print() {
