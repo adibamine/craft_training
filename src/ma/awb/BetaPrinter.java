@@ -1,6 +1,6 @@
 package ma.awb;
 
-public class BetaPrinter implements AllInOneScanning, AllInOnePrinting {
+public class BetaPrinter implements AllInOnePrinter {
 
     @Override
     public boolean print() {
@@ -12,6 +12,11 @@ public class BetaPrinter implements AllInOneScanning, AllInOnePrinting {
     public boolean scan() {
         //Logic for scanning
         return true;
+    }
+
+    @Override
+    public boolean fax() {
+        throw new UnsupportedOperationException("Faxing not supported.");
     }
 
 }
